@@ -59,9 +59,9 @@ const heroBars = document.getElementById('heroBars');
 
 if (heroMainImg && heroBars) {
   const heroPhotos = {
-    1: '/assets/hero-team.png',
-    2: '/assets/hero-team-2.jpg',
-    3: '/assets/hero-team-2.jpg'
+    1: 'assets/hero-team.png',
+    2: 'assets/hero-team-2.jpg',
+    3: 'assets/hero-team-2.jpg'
   };
 
   const setActiveBar = (targetBar) => {
