@@ -112,7 +112,7 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
 .lang-select .lang-flag-icon {
   width: 25px;
   height: 25px;
-  background-image: url('/assets/britain.png');
+  background-image: url('assets/britain.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
