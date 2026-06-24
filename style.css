@@ -112,7 +112,7 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
 .lang-select .lang-flag-icon {
   width: 25px;
   height: 25px;
-  background-image: url('/assets/britain.png');
+  background-image: url('assets/britain.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -176,9 +176,9 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
   display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
-  width: 32px;
-  height: 32px;
+  gap: 4px;
+  width: 40px;
+  height: 40px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -188,9 +188,9 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
 
 .burger span {
   display: block;
-  height: 2px;
+  height: 3px;
   width: 100%;
-  background: var(--white);
+  background: white;
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.25s ease;
   color: black;
@@ -341,7 +341,7 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
   color: rgb(80, 80, 80);
   font-size: 16px;
   line-height: 1.55;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .mission-goals {
@@ -383,12 +383,12 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
 
 .mission .bullet-list li {
   color: rgb(78, 78, 78);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .goals .bullet-list li {
   color: rgba(255, 255, 255, 0.92);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .team {
@@ -465,10 +465,35 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 48px;
 }
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .footer-left {
+    flex: 1 1 auto;
+  }
+
+  .footer-right {
+    flex: 0 0 auto;
+    min-width: 360px;
+  }
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 .footer-header {
   display: flex;
@@ -478,8 +503,8 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
 }
 
 .footer-badge {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
   border: 1px solid rgba(59, 130, 246, 0.6);
   background: #172554;
@@ -488,7 +513,7 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  font-size: 13px;
+  font-size: 18px;
   flex: 0 0 auto;
 }
 
@@ -508,28 +533,54 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
   font-weight: 400;
 }
 
+@media (min-width: 1024px) {
+  .footer-left {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+  }
+}
+
+
+
 .footer-details {
   display: flex;
   flex-direction: column;
   gap: 14px;
+
 }
 
 .footer-detail {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; 
   gap: 14px;
+  align-items: center;
+  
 }
 
 .footer-icon {
-  width: 22px;
-  height: 22px;
+  width: 40px;
+  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #3b82f6;
-  font-size: 14px;
-  margin-top: 2px;
+  font-size: 20px;
+  margin-top: 0;
   flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(59, 130, 246, 0.6);
+  background: #172554;
+  color: #60a5fa;
+}
+
+.footer-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  vertical-align: middle;
 }
 
 .footer-label {
@@ -539,7 +590,16 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
   font-weight: 800;
   color: rgba(148, 163, 184, 0.85);
   margin-bottom: 4px;
+  line-height: 1.1;
 }
+
+.footer-detail > .footer-icon {
+  align-items: center;
+  flex: 0 0 auto;
+  justify-content: center;
+  margin-top: 0;
+}
+
 
 .footer-link {
   color: #ffffff;
@@ -565,9 +625,13 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
   justify-content: space-between;
   text-align: center;
   font-size: 12px;
-  color: rgba(148, 163, 184, 0.85);
+  color: rgba(148, 163, 184, 0.349);
 }
-
+.footer-bottom p {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(74, 111, 163, 0.267);
+}
 .footer-links {
   display: flex;
   gap: 10px;
@@ -583,11 +647,8 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
 
 .footer-mini-link:hover { color: rgba(148, 163, 184, 0.65); }
 
-@media (min-width: 1024px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-
 @media (min-width: 640px) {
+
   .footer-text { font-size: 16px; }
   .footer-bottom { flex-direction: row; }
 }
@@ -617,7 +678,7 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
 @media (max-width: 860px) {
   .burger { display: flex; }
 
-  .burger span { background: #000; }
+.burger span { background: var(--navy); }
 
   .hero { padding: 40px 16px 56px; }
 
