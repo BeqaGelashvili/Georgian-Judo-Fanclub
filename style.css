@@ -675,8 +675,12 @@ h1, h2, h3 { font-weight: 700; line-height: 1.25; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+.mobile-only { display: none; }
+
 @media (max-width: 860px) {
   .burger { display: flex; }
+  .mobile-only { display: block; }
+
 
 .burger span { background: var(--navy); }
 
